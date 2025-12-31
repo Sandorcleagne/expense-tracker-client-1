@@ -5,11 +5,13 @@ import { useEffect, useState } from "react";
 import Drawer from "./Drawer";
 import Button from "./Button";
 import { navItems } from "@/constants";
+import CustomModal from "./CustomModal";
+import Login from "./UserAuth/Login";
 
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
-
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll);
@@ -49,7 +51,11 @@ const Navbar = () => {
             </div>
 
             <div className="hidden md:flex">
-              <Button text="Join Now" size="md" />
+              <Button
+                text="Join Now"
+                size="md"
+                onClick={() => setIsModalOpen(!isModalOpen)}
+              />
             </div>
           </div>
 
@@ -80,6 +86,9 @@ const Navbar = () => {
 
       {/* Add spacing so content doesn't go under fixed navbar */}
       <div className="h-20 md:h-24" />
+      <CustomModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <Login />
+      </CustomModal>
     </>
   );
 };

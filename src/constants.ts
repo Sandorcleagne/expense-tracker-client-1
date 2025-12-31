@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const navItems = [
   {
     id: 1,
@@ -53,5 +55,51 @@ export const whyChooseContent = [
     desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, maxime. Lorem, ipsum.",
     buttonTitle: "Learn More",
     image: "/images/whychoose/i4.webp",
+  },
+];
+
+export const footerAboutUs = [
+  {
+    id: 1,
+    title: "Support Center",
+  },
+  {
+    id: 2,
+    title: "Customer Support",
+  },
+  {
+    id: 3,
+    title: "About Us",
+  },
+  {
+    id: 4,
+    title: "Copyright",
+  },
+  {
+    id: 5,
+    title: "Popular campaigns",
+  },
+];
+
+export const ourInformation = [
+  {
+    id: 1,
+    title: "Return Policy",
+  },
+  {
+    id: 2,
+    title: "Privacy Policy",
+  },
+  {
+    id: 3,
+    title: "Terms & Conditions",
+  },
+  {
+    id: 4,
+    title: "Site Map",
+  },
+  {
+    id: 5,
+    title: "Store Hours",
   },
 ];

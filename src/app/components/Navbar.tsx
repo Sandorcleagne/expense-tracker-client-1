@@ -36,7 +36,7 @@ const Navbar = () => {
               {navItems?.map((item) => (
                 <li
                   key={item.id}
-                  className="cursor-pointer hover:text-(--theme-color)"
+                  className="cursor-pointer hover:text-(--theme-color) font-semibold tracking-wide"
                 >
                   {item?.name}
                 </li>

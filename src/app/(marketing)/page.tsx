@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import HeroSection from "../components/HeroSection";
+import StopWatch from "../components/StopWatch";
 const WhyChooseSection = dynamic(
   () => import("../components/WhyChooseSection"),
   {
@@ -12,6 +13,7 @@ const MarketingHome = () => {
     <>
       <HeroSection />
       <WhyChooseSection />
+      <StopWatch />
     </>
   );
 };
